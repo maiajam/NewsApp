@@ -1,8 +1,8 @@
-package com.dawood.newsapp.network;
+package com.dawood.newsapp.data.retrofit;
 
 
 import com.dawood.newsapp.models.NewsResponseModel;
-import com.dawood.newsapp.models.SourcesModel;
+import com.dawood.newsapp.data.model.SourcesModel;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

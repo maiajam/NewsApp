@@ -1,8 +1,10 @@
-package com.dawood.newsapp;
+package com.dawood.newsapp.helper;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+
+import com.dawood.newsapp.BuildConfig;
 
 public class Utils {
     public static String BaseUrl = BuildConfig.BASE_URL;

@@ -1,4 +1,4 @@
-package com.dawood.newsapp;
+package com.dawood.newsapp.ui.activitis;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +10,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 
-import com.dawood.newsapp.network.ConnectivityReceiver;
+import com.dawood.newsapp.helper.NewApp;
+import com.dawood.newsapp.R;
+import com.dawood.newsapp.helper.network.ConnectivityReceiver;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

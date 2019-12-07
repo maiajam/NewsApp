@@ -1,4 +1,4 @@
-package com.dawood.newsapp.models;
+package com.dawood.newsapp.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

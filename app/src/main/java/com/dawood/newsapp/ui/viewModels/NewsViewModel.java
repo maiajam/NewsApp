@@ -1,12 +1,13 @@
-package com.dawood.newsapp.news;
+package com.dawood.newsapp.ui.viewModels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.dawood.newsapp.Utils;
+import com.dawood.newsapp.helper.Utils;
 import com.dawood.newsapp.models.NewsResponseModel;
-import com.dawood.newsapp.models.SourcesModel;
+import com.dawood.newsapp.data.model.SourcesModel;
+import com.dawood.newsapp.data.repo.NewsRepo;
 
 
 public class NewsViewModel extends ViewModel {
@@ -20,23 +21,23 @@ public class NewsViewModel extends ViewModel {
     public NewsViewModel() {
     }
 
-    void init(String page, String topic) {
+    public void init(String page, String topic) {
         mutableLiveData = newsRepository.getNews(Utils.ApiKey, topic, page + "");
         sourcesLiveData = newsRepository.getNewsSources(Utils.ApiKey);
     }
 
 
-    LiveData<NewsResponseModel> getNewsRepository() {
+    public LiveData<NewsResponseModel> getNewsRepository() {
         return mutableLiveData;
     }
 
-    LiveData<NewsResponseModel> getFilterdNewsRepository(String country, String source, String page) {
+    public LiveData<NewsResponseModel> getFilterdNewsRepository(String country, String source, String page) {
         filterdNewsLiveData = newsRepository.getFilterdNews(Utils.ApiKey, country, source, page);
         return filterdNewsLiveData;
     }
 
 
-    LiveData<SourcesModel> getSources() {
+    public LiveData<SourcesModel> getSources() {
         return sourcesLiveData;
     }
 }

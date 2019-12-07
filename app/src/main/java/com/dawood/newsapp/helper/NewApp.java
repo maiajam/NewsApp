@@ -1,8 +1,8 @@
-package com.dawood.newsapp;
+package com.dawood.newsapp.helper;
 
 import android.app.Application;
 
-import com.dawood.newsapp.network.ConnectivityReceiver;
+import com.dawood.newsapp.helper.network.ConnectivityReceiver;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.dawood.newsapp.news;
+package com.dawood.newsapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.dawood.newsapp.R;
 import com.dawood.newsapp.models.NewsResponseModel;
+import com.dawood.newsapp.ui.frag.NewsFragmentDirections;
 
 import java.util.ArrayList;
 
@@ -32,17 +33,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewViewHolder>
         return new NewViewHolder(view);
     }
 
-    void setNewsList(ArrayList<NewsResponseModel.Article> newsList) {
+    public void setNewsList(ArrayList<NewsResponseModel.Article> newsList) {
         this.newsList = newsList;
         notifyDataSetChanged();
     }
 
-    void getMoreNews(ArrayList<NewsResponseModel.Article> newsList) {
+    public void getMoreNews(ArrayList<NewsResponseModel.Article> newsList) {
         this.newsList.addAll(newsList);
         notifyDataSetChanged();
     }
 
-    void clear() {
+    public void clear() {
         newsList.clear();
         notifyDataSetChanged();
     }

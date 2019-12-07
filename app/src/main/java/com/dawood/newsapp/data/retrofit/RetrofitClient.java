@@ -1,4 +1,4 @@
-package com.dawood.newsapp.network;
+package com.dawood.newsapp.data.retrofit;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

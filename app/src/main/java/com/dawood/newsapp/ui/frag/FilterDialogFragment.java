@@ -1,4 +1,4 @@
-package com.dawood.newsapp;
+package com.dawood.newsapp.ui.frag;
 
 
 import android.graphics.Color;
@@ -20,6 +20,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import com.dawood.newsapp.R;
 
 import java.util.Arrays;
 import java.util.List;

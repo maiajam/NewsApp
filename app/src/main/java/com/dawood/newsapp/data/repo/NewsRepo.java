@@ -1,15 +1,15 @@
-package com.dawood.newsapp.news;
+package com.dawood.newsapp.data.repo;
 
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
 
-import com.dawood.newsapp.Utils;
+import com.dawood.newsapp.helper.Utils;
 import com.dawood.newsapp.models.NewsResponseModel;
-import com.dawood.newsapp.models.SourcesModel;
-import com.dawood.newsapp.network.ApiServices;
-import com.dawood.newsapp.network.RetrofitClient;
+import com.dawood.newsapp.data.model.SourcesModel;
+import com.dawood.newsapp.data.retrofit.ApiServices;
+import com.dawood.newsapp.data.retrofit.RetrofitClient;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -36,7 +36,7 @@ public class NewsRepo {
     }
 
 
-    MutableLiveData<NewsResponseModel> getNews(String apiKey, String topic, String page) {
+    public MutableLiveData<NewsResponseModel> getNews(String apiKey, String topic, String page) {
         MutableLiveData<NewsResponseModel> newsData = new MutableLiveData<>();
         disposable.add(newsApi.getAllNews(apiKey, topic, page)
                 .subscribeOn(Schedulers.io())
@@ -48,7 +48,7 @@ public class NewsRepo {
         return newsData;
     }
 
-    MutableLiveData<NewsResponseModel> getFilterdNews(String apiKey, String country, String source, String page) {
+    public MutableLiveData<NewsResponseModel> getFilterdNews(String apiKey, String country, String source, String page) {
         MutableLiveData<NewsResponseModel> newsData = new MutableLiveData<>();
         disposable.add(newsApi.getFilterdNews(apiKey, country, source, page)
                 .subscribeOn(Schedulers.io())
@@ -60,7 +60,7 @@ public class NewsRepo {
         return newsData;
     }
 
-    MutableLiveData<SourcesModel> getNewsSources(String apiKey) {
+    public MutableLiveData<SourcesModel> getNewsSources(String apiKey) {
         MutableLiveData<SourcesModel> newsSources = new MutableLiveData<>();
         disposable.add(newsApi.getSources(apiKey)
                 .subscribeOn(Schedulers.io())

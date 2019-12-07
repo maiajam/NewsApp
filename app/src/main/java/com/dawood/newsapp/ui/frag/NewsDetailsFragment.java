@@ -1,4 +1,4 @@
-package com.dawood.newsapp.details;
+package com.dawood.newsapp.ui.frag;
 
 
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-import com.dawood.newsapp.MainActivity;
+import com.dawood.newsapp.ui.activitis.MainActivity;
 import com.dawood.newsapp.R;
-import com.dawood.newsapp.Utils;
+import com.dawood.newsapp.helper.Utils;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -1,4 +1,4 @@
-package com.dawood.newsapp.news;
+package com.dawood.newsapp.ui.frag;
 
 
 import android.os.Bundle;
@@ -23,12 +23,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.dawood.newsapp.FilterDialogFragment;
-import com.dawood.newsapp.MainActivity;
+import com.dawood.newsapp.ui.activitis.MainActivity;
 import com.dawood.newsapp.R;
 import com.dawood.newsapp.models.NewsResponseModel;
-import com.dawood.newsapp.models.SourcesModel;
-import com.dawood.newsapp.network.ConnectivityReceiver;
+import com.dawood.newsapp.data.model.SourcesModel;
+import com.dawood.newsapp.helper.network.ConnectivityReceiver;
+import com.dawood.newsapp.adapter.NewsAdapter;
+import com.dawood.newsapp.ui.viewModels.NewsViewModel;
 
 import org.jetbrains.annotations.NotNull;
 
